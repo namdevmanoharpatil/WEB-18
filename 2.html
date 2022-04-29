@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    //string
+    // localStorage.setItem("key",value)
+    localStorage.setItem("name1","shadik") //key,value
+
+    localStorage.setItem("name2","Ramesh");
+
+    // localStorage.getItem("key");
+    var name1 = localStorage.getItem("name1");
+    console.log(name1);
+
+    var name2 = localStorage.getItem("name2");
+    console.log(name2);
+
+    // Numbers 
+    localStorage.setItem("mobileNo","99999999999");
+
+    localStorage.setItem("ccv","473");
+
+    var ccvNum = localStorage.getItem("ccv");
+    console.log(ccvNum);
+
+
+    // Array 
+    var names = ["rovin","banik","aditya"]
+    localStorage.setItem("namesArr",JSON.stringify(names)); 
+
+    //JSON -> JavaScript Object Notation
+    //JSON -> Universal data format
+    //JSON -> c,c++,java
+
+    var namesFromStorage = JSON.parse(localStorage.getItem("namesArr"))
+    console.log(namesFromStorage);
+    
+    // 1. whenever you want to store arrays in LS -> stringify
+    // 1. whenever you want get arrays from LS -> parse 
+
+    //Object 
+    var obj = {name:"ramesh",place:"kolhapur"}
+
+    localStorage.setItem("myobj",JSON.stringify(obj));
+
+    var Mydata = JSON.parse(localStorage.getItem("myobj"))
+    console.log(Mydata);
+
+</script>
